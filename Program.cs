@@ -5,7 +5,62 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        #region Part01 Theoretical Questions
+        // ===================== Q1 Object Copying =====================
+
+        // a) What happens when you assign one object variable to another object variable?
+        //    The reference is copied, not the object.
+        //    Both variables point to the SAME object in memory.
+
+        // b) Does assigning one object to another create a new object? Explain.
+        //    No. No new object is created. There is still one object,
+        //    and a change made through one variable is seen through the other.
+
+        // c) What is the difference between copying an object and copying its reference?
+        //    Copying an object creates a NEW independent object with its own data.
+        //    Copying a reference creates another variable that points to the same object.
+
+
+        // ================ Q2 Shallow Copy vs Deep Copy ================
+
+        // a) What is a Shallow Copy?
+        //    It creates a new object and copies the fields of the original.
+        //    Value-type fields are copied, reference-type fields copy only the reference.
+
+        // b) What is a Deep Copy?
+        //    It creates a new object and also creates new copies of the
+        //    objects it references.
+
+        // c) What happens to reference-type members when a Shallow Copy is created?
+        //    The original and the copy share the SAME reference-type objects
+        //    (a change through one affects the other).
+
+        // d) What happens to reference-type members when a Deep Copy is created?
+        //    The copy gets its OWN new reference-type objects,
+        //    so the original is not affected.
+
+        // e) Give one situation where Deep Copy would be safer than Shallow Copy.
+        //    Copying a Shipment and changing the copy's DeliveryAddress:
+        //    Deep Copy keeps the original shipment's address unchanged.
+
+
+        // ===================== Q3 Static Members =====================
+
+        // a) What is a static field, and how is it different from an instance field?
+        //    A static field belongs to the class and has one shared copy for all objects.
+        //    An instance field belongs to each object and every object has its own copy.
+
+        // b) What is a static method? Can a static method directly access instance members?
+        //    A static method belongs to the class and is called using the class name.
+        //    No, it cannot directly access instance members (it has no "this"),
+        //    it can only use them through an object.
+
+        // c) What is a static constructor, and when is it executed?
+        //    It initializes static members. It has no parameters and no access modifier,
+        //    and it cannot be called manually.
+        // 
+        #endregion
+
         CultureInfo.CurrentCulture = CultureInfo.InvariantCulture;
         CultureInfo.DefaultThreadCurrentCulture = CultureInfo.InvariantCulture;
 
